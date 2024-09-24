@@ -300,17 +300,94 @@
             </ul>
         </div>
         
-        
+       <div>
+        <h1>Implementación del Sistema</h1>
+
+        <ul>
+            <li>
+                <strong>Configuración de la API REST</strong>
+                <ul>
+                    <li><strong>Objetivo:</strong> Gestionar el catálogo de productos, el carrito de compras y los pagos.</li>
+                    <li><strong>Tecnología:</strong> Utilizar Node.js para crear una API REST eficiente y escalable.</li>
+                </ul>
+            </li>
+    
+            <li>
+                <strong>Desarrollo del Frontend</strong>
+                <ul>
+                    <li><strong>Objetivo:</strong> Crear interfaces de usuario atractivas y responsivas.</li>
+                    <li><strong>Tecnología:</strong> Utilizar React para desarrollar una interfaz de usuario dinámica, incluyendo un sistema de recomendación de productos.</li>
+                </ul>
+            </li>
+    
+            <li>
+                <strong>Integración de Opciones de Pago</strong>
+                <ul>
+                    <li><strong>Objetivo:</strong> Permitir a los usuarios realizar pagos de manera segura y eficiente.</li>
+                    <li><strong>Tecnología:</strong> Integrar Stripe para pagos con tarjeta y Coinbase Commerce para pagos con criptomonedas.</li>
+                    <li><strong>Funcionalidad Adicional:</strong> Configurar cupones de descuento en tiempo real para mejorar la experiencia del usuario.</li>
+                </ul>
+            </li>
+        </ul>
+       </div> 
+     
     </section>
 
     <section id="testing">
-        <h2>Pruebas</h2>
-        <p>Se realizan pruebas para asegurar la calidad del producto final, incluyendo pruebas de funcionalidad y rendimiento.</p>
+        <div>
+            <h1>Estrategia de Pruebas</h1>
+    
+            <ul>
+                <li>
+                    <strong>Pruebas de Carga</strong>
+                    <ul>
+                        <li><strong>Objetivo:</strong> Evaluar cómo responde la plataforma bajo la demanda de múltiples usuarios simultáneos.</li>
+                        <li><strong>Herramienta:</strong> Utilizar JMeter para realizar pruebas de carga y medir el rendimiento del sistema.</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Pruebas de Funcionalidad</strong>
+                    <ul>
+                        <li><strong>Objetivo:</strong> Verificar que todos los flujos de compra y la funcionalidad del carrito funcionen correctamente.</li>
+                        <li><strong>Método:</strong> Probar la plataforma en diferentes dispositivos (móviles, tablets, desktops) y navegadores para asegurar la compatibilidad y una experiencia de usuario consistente.</li>
+                    </ul>
+                </li>
+            </ul>
+           </div>
     </section>
 
     <section id="despliegue">
         <h2>Despliegue</h2>
-        <p>Se entrega el producto al cliente y se pone en funcionamiento en un entorno de producción.</p>
+
+        <h1>Despliegue y Mantenimiento en AWS</h1>
+
+        <ul>
+            <li>
+                <strong>Despliegue de la Aplicación</strong>
+                <ul>
+                    <li><strong>Escalabilidad:</strong> Utiliza Amazon EC2 para instancias de servidores escalables. Configura Auto Scaling Groups para ajustar automáticamente la capacidad de la aplicación según la demanda.</li>
+                    <li><strong>Balanceadores de Carga:</strong> Implementa Elastic Load Balancing (ELB) para distribuir el tráfico entrante entre múltiples instancias EC2, asegurando alta disponibilidad y tolerancia a fallos.</li>
+                    <li><strong>Respaldo Automatizado:</strong> Configura Amazon RDS para bases de datos con copias de seguridad automáticas y snapshots. Utiliza Amazon S3 para almacenar copias de seguridad de archivos y datos críticos.</li>
+                </ul>
+            </li>
+    
+            <li>
+                <strong>Monitoreo del Rendimiento</strong>
+                <ul>
+                    <li><strong>Amazon CloudWatch:</strong> Configura métricas y alarmas para monitorear el rendimiento de la aplicación, como el uso de CPU, memoria, y latencia de red. Establece dashboards personalizados para visualizar el estado de la infraestructura en tiempo real.</li>
+                    <li><strong>Logs y Alertas:</strong> Utiliza CloudWatch Logs para centralizar y analizar logs de la aplicación. Configura alertas para eventos críticos que requieran atención inmediata.</li>
+                </ul>
+            </li>
+    
+            <li>
+                <strong>Ciclos de Actualización</strong>
+                <ul>
+                    <li><strong>Actualizaciones Periódicas:</strong> Planifica ciclos de actualización regulares para implementar mejoras y nuevos lanzamientos de productos. Utiliza AWS CodeDeploy para automatizar el proceso de despliegue y minimizar el tiempo de inactividad.</li>
+                    <li><strong>Pruebas y Validación:</strong> Antes de cada actualización, realiza pruebas exhaustivas en un entorno de staging para asegurar que los cambios no afecten la estabilidad de la aplicación en producción.</li>
+                </ul>
+            </li>
+        </ul>
     </section>
 
     
