@@ -23,22 +23,284 @@
 
     <section id="planificacion">
         <h2>Planificación</h2>
-        <p>En esta fase se define el alcance del proyecto, los recursos necesarios y los tiempos de entrega.</p>
+        <table>
+            <caption>Requisitos y Plazos de Entrega</caption>
+            <thead>
+                <tr>
+                    <th>Requisito</th>
+                    <th>Plazo de entrega</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Catálogo de productos</td>
+                    <td>2 semanas</td>
+                </tr>
+                <tr>
+                    <td>Carrito de compras</td>
+                    <td>1 semana</td>
+                </tr>
+                <tr>
+                    <td>Registro e inicio de sesión de usuarios</td>
+                    <td>2 semanas</td>
+                </tr>
+                <tr>
+                    <td>Historial de pedidos y gestión de cuentas</td>
+                    <td>1 semana</td>
+                </tr>
+                <tr>
+                    <td>Proceso de pago y opciones (Stripe y Coinbase)</td>
+                    <td>2 semanas</td>
+                </tr>
+                <tr>
+                    <td>Notificaciones por correo electrónico</td>
+                    <td>1 semana</td>
+                </tr>
+                <tr>
+                    <td>Seguimiento de pedidos en tiempo real</td>
+                    <td>1 semana</td>
+                </tr>
+                <tr>
+                    <td>Rendimiento y escalabilidad</td>
+                    <td>En paralelo con la implementación</td>
+                </tr>
+                <tr>
+                    <td>Seguridad (SSL, cifrado, protección XSS/CSRF)</td>
+                    <td>En paralelo con la integración de pagos</td>
+                </tr>
+                <tr>
+                    <td>Compatibilidad (diseño responsivo)</td>
+                    <td>Durante todo el desarrollo</td>
+                </tr>
+                <tr>
+                    <td>Mantenimiento (código limpio, plan de actualizaciones)</td>
+                    <td>Al final del proyecto</td>
+                </tr>
+                <tr>
+                    <td>Pruebas de rendimiento, seguridad y escalabilidad</td>
+                    <td>2 semanas</td>
+                </tr>
+                <tr>
+                    <td>Pruebas de compatibilidad</td>
+                    <td>1 semana</td>
+                </tr>
+                <tr>
+                    <td>Despliegue y puesta en producción</td>
+                    <td>1 semana</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
     <section id="analisis">
         <h2>Análisis de Requisitos</h2>
-        <p>Aquí se identifican las necesidades del cliente y se elaboran los requisitos del sistema.</p>
-    </section>
+        <div class="container">
+            <h1>Requisitos Funcionales y No Funcionales</h1>
+        
+            <h2>Requisitos Funcionales</h2>
+            <ul>
+                <li>
+                    <strong>Catálogo de Productos</strong>
+                    <ul class="sublist">
+                        <li><strong>Función Principal:</strong> Los usuarios podrán explorar todos los productos organizados en diferentes categorías.</li>
+                        <li><strong>Subfunción:</strong> Al hacer clic en un producto, los usuarios podrán ver detalles como la descripción, el precio y características adicionales.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Carrito de Compras</strong>
+                    <ul class="sublist">
+                        <li><strong>Función Principal:</strong> Los usuarios podrán agregar productos a un carrito de compras.</li>
+                        <li><strong>Subfunción:</strong> El carrito permitirá actualizar la cantidad de productos y eliminar artículos.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Registro e Inicio de Sesión</strong>
+                    <ul class="sublist">
+                        <li><strong>Función Principal:</strong> Los usuarios podrán registrarse con su correo electrónico y gestionar su cuenta.</li>
+                        <li><strong>Subfunción:</strong> Los usuarios podrán iniciar sesión, revisar sus compras anteriores y actualizar información personal como la dirección de envío.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Historial de Compras</strong>
+                    <ul class="sublist">
+                        <li><strong>Función Principal:</strong> Los usuarios tendrán acceso a un historial de pedidos anteriores, donde podrán ver detalles de cada compra.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Proceso de Pago</strong>
+                    <ul class="sublist">
+                        <li><strong>Función Principal:</strong> Los usuarios podrán pagar utilizando varios métodos, como tarjeta de crédito o PayPal.</li>
+                        <li><strong>Subfunción:</strong> Verificar el costo del envío antes del pago y confirmar el pedido.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Notificaciones de Pedidos</strong>
+                    <ul class="sublist">
+                        <li><strong>Función Principal:</strong> Los usuarios recibirán notificaciones por correo electrónico sobre el estado de su pedido, como confirmación de compra y envío.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Seguimiento de Pedidos</strong>
+                    <ul class="sublist">
+                        <li><strong>Función Principal:</strong> Los usuarios podrán seguir el estado de sus pedidos en tiempo real una vez que hayan sido enviados.</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h2>Requisitos No Funcionales</h2>
+            <ul>
+                <li>
+                    <strong>Usabilidad</strong>
+                    <ul class="sublist">
+                        <li>La interfaz debe ser fácil de usar e intuitiva, con una navegación fluida entre las secciones del catálogo, carrito de compras y gestión de cuentas.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Rendimiento</strong>
+                    <ul class="sublist">
+                        <li>La aplicación debe soportar múltiples usuarios simultáneamente, manteniendo tiempos de respuesta rápidos, especialmente durante el proceso de pago.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Seguridad</strong>
+                    <ul class="sublist">
+                        <li>El sistema debe manejar de manera segura los datos de los usuarios y sus transacciones, asegurando la privacidad de la información personal y los datos financieros.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Disponibilidad</strong>
+                    <ul class="sublist">
+                        <li>La plataforma debe estar disponible 24/7, con un mínimo de tiempo de inactividad durante actualizaciones o mantenimiento.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Escalabilidad</strong>
+                    <ul class="sublist">
+                        <li>El sistema debe ser capaz de manejar el crecimiento en la cantidad de productos, usuarios y transacciones sin degradar el rendimiento.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Compatibilidad</strong>
+                    <ul class="sublist">
+                        <li>La aplicación debe ser accesible en distintos dispositivos (móviles, tablets, desktops) y navegadores modernos.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Mantenibilidad</strong>
+                    <ul class="sublist">
+                        <li>El código de la aplicación debe estar bien documentado para facilitar futuras actualizaciones o correcciones.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
     <section id="diseno">
         <h2>Diseño de Arquitectura</h2>
-        <p>Se diseña la estructura del sistema, seleccionando las tecnologías y plataformas adecuadas.</p>
-    </section>
+        <div class="container">
+            <h1>Arquitectura del Sistema</h1>
+        
+            <h2>Frontend</h2>
+            <ul>
+                <li>
+                    <strong>Tecnología:</strong> Desarrollado con React para una interfaz de usuario rápida y adaptable, optimizada para dispositivos móviles y tablets.
+                </li>
+            </ul>
+        
+            <h2>Backend</h2>
+            <ul>
+                <li>
+                    <strong>Tecnología:</strong> Implementado con Node.js y una API REST para gestionar las operaciones de usuarios, carrito de compras y pagos.
+                </li>
+                <li>
+                    <strong>Base de Datos:</strong> Utiliza MongoDB para almacenar información de productos, usuarios y pedidos.
+                </li>
+                <li>
+                    <strong>Pasarelas de Pago:</strong> Integración con Stripe para pagos con tarjeta y Coinbase Commerce para pagos con criptomonedas.
+                </li>
+            </ul>
+        
+            <h2>Componentes del Sistema</h2>
+            <ul>
+                <li>
+                    <strong>Interfaz de Usuario (Frontend)</strong>
+                    <ul class="sublist">
+                        <li><strong>React:</strong> Proporciona una experiencia de usuario ágil y responsiva.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>API REST (Backend)</strong>
+                    <ul class="sublist">
+                        <li><strong>Node.js:</strong> Maneja las solicitudes y respuestas entre el frontend y la base de datos.</li>
+                        <li><strong>Operaciones CRUD:</strong> Permite crear, leer, actualizar y eliminar datos de productos, usuarios y pedidos.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Gestión de Pagos</strong>
+                    <ul class="sublist">
+                        <li><strong>Stripe:</strong> Procesa pagos con tarjeta de crédito.</li>
+                        <li><strong>Coinbase Commerce:</strong> Facilita pagos con criptomonedas.</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h2>Flujo de Datos</h2>
+            <ul>
+                <li>
+                    <strong>Interacción del Usuario</strong>
+                    <ul class="sublist">
+                        <li><strong>Frontend (React):</strong> Los usuarios interactúan con la interfaz para navegar por productos, gestionar el carrito y realizar pagos.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Comunicación con el Backend</strong>
+                    <ul class="sublist">
+                        <li><strong>API REST (Node.js):</strong> El frontend envía solicitudes al backend para obtener o modificar datos.</li>
+                        <li><strong>Base de Datos (MongoDB):</strong> El backend consulta o actualiza la base de datos según las solicitudes del usuario.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Procesamiento de Pagos</strong>
+                    <ul class="sublist">
+                        <li><strong>Stripe y Coinbase Commerce:</strong> El backend se comunica con las pasarelas de pago para procesar transacciones y confirmar pagos.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
     <section id="implementacion">
         <h2>Implementación</h2>
-        <p>En esta etapa se desarrolla el código del proyecto y se integran las funcionalidades.</p>
+        <div class="container">
+            <h1>Implementación del Sistema</h1>
+        
+            <ul>
+                <li>
+                    <strong>Configuración de la API REST</strong>
+                    <ul class="sublist">
+                        <li><strong>Objetivo:</strong> Gestionar el catálogo de productos, el carrito de compras y los pagos.</li>
+                        <li><strong>Tecnología:</strong> Utilizar Node.js para crear una API REST eficiente y escalable.</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Desarrollo del Frontend</strong>
+                    <ul class="sublist">
+                        <li><strong>Objetivo:</strong> Crear interfaces de usuario atractivas y responsivas.</li>
+                        <li><strong>Tecnología:</strong> Utilizar React para desarrollar una interfaz de usuario dinámica, incluyendo un sistema de recomendación de productos.</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Integración de Opciones de Pago</strong>
+                    <ul class="sublist">
+                        <li><strong>Objetivo:</strong> Permitir a los usuarios realizar pagos de manera segura y eficiente.</li>
+                        <li><strong>Tecnología:</strong> Integrar Stripe para pagos con tarjeta y Coinbase Commerce para pagos con criptomonedas.</li>
+                        <li><strong>Funcionalidad Adicional:</strong> Configurar cupones de descuento en tiempo real para mejorar la experiencia del usuario.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        
     </section>
 
     <section id="testing">
